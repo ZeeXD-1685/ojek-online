@@ -1,0 +1,181 @@
+:root {
+  --bg: #ffffff;
+  --text: #222222;
+  --subtext: #555555;
+  --accent: #ff6600;         /* Oranye utama */
+  --accent-light: #fff4e6;   /* Oranye muda (latar box) */
+  --accent-dark: #cc5200;    /* Oranye gelap (hover) */
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  flex: 1;
+}
+
+main {
+  flex: 1;
+}
+
+header, footer {
+  background-color: var(--accent);
+  color: white;
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: var(--accent-dark);
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+main {
+  padding: 60px 40px;
+}
+
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: var(--accent-light);
+  color: var(--text);
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  color: var(--subtext);
+}
+
+.btn {
+  margin-top: 30px;
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 14px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--accent-dark);
+}
+
+.cards, .layanan-list, .promo-list, .faq-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.card, .layanan-item, .promo-box, .faq, .promo-item, .faq-item {
+  background-color: var(--accent-light);
+  padding: 20px;
+  border-radius: 12px;
+  width: 250px;
+  text-align: center;
+  color: var(--text);
+}
+
+.card img {
+  width: 50px;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  text-align: center;
+  color: var(--accent-dark);
+  margin-bottom: 30px;
+  font-size: 26px;
+}
+
+footer {
+  background-color: var(--accent);
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Tombol ChatBot Mengambang */
+.cs-floating {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--accent-dark);
+  color: white;
+  padding: 10px 16px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 14px;
+  z-index: 999;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cs-floating:hover {
+  background-color: #993d00;
+}
+
+.cs-floating img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Popup ChatBot */
+#chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background: #333;
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.5);
+  max-width: 300px;
+  z-index: 1000;
+}
+
+.btn-whatsapp {
+  background-color: #25d366;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.btn-whatsapp:hover {
+  background-color: #128c4a;
+}

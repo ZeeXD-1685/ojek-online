@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Grab - Beranda</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style3.css" />
+  <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body>
+  <header>
+    <div class="logo">grab</div>
+    <nav>
+      <a href="index3.html">Beranda</a>
+      <a href="layanan3.html">Layanan</a>
+      <a href="promo3.html">Promo</a>
+      <a href="bantuan3.html">Bantuan</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Satu Aplikasi. Berjuta Solusi. Serba Hijau, Serba Efisien.</h1>
+    <p>Layanan transportasi, kirim barang, pesan makanan, dan bayar apa saja dalam satu genggaman.</p>
+    <button class="btn"><a href="https://play.google.com/store/apps/details?id=com.grabtaxi.passenger&hl=id"> Download Sekarang</a></button>
+  </section>
+
+  <section class="section">
+    <h2 align="center">Layanan Unggulan</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="https://img.icons8.com/ios-filled/50/00b14f/motorcycle.png" alt="GoRide" />
+        <h3>GoRide</h3>
+        <p>Transportasi cepat dan nyaman langsung dari aplikasi.</p>
+      </div>
+      <div class="card">
+        <img src="https://img.icons8.com/ios-filled/50/00b14f/meal.png" alt="GoFood" />
+        <h3>GoFood</h3>
+        <p>Ribuan restoran favorit, diantar langsung ke pintu kamu.</p>
+      </div>
+      <div class="card">
+        <img src="https://img.icons8.com/ios-filled/50/00b14f/in-transit--v1.png" alt="GoSend" />
+        <h3>GoSend</h3>
+        <p>Kirim barang dengan cepat dan aman ke mana saja.</p>
+      </div>
+      <div class="card">
+        <img src="https://img.icons8.com/ios-filled/50/00b14f/wallet.png" alt="GoPay" />
+        <h3>GoPay</h3>
+        <p>Pembayaran digital aman dan praktis di semua transaksi.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Grab Clone UI. Website ini hanya contoh tampilan.
+  </footer>
+
+  <script>
+    ScrollReveal().reveal('.card, .layanan-item, .promo-box, .faq', {
+      delay: 100,
+      distance: '20px',
+      origin: 'bottom',
+      interval: 200,
+      reset: false
+    });
+
+    const button = document.getElementById('chatbot-button');
+    const popup = document.getElementById('chat-popup');
+    if (button) {
+      button.addEventListener('click', () => {
+        popup.style.display = popup.style.display === 'none' ? 'block' : 'none';
+      });
+    }
+
+    const textElement = document.querySelector(".hero h1");
+    if (textElement) {
+      const text = "Satu Aplikasi. Berjuta Solusi. Serba Hijau, Serba Efisien.";
+      let i = 0;
+      textElement.textContent = "";
+      function type() {
+        if (i < text.length) {
+          textElement.textContent += text.charAt(i);
+          i++;
+          setTimeout(type, 50);
+        }
+      }
+      type();
+    }
+  </script>
+</body>
+</html>
